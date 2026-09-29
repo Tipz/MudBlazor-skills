@@ -16,6 +16,14 @@ The public component pages require client-side Blazor execution and returned onl
 
 The source is MIT licensed. The examples in this skill are shortened and adapted for agent guidance rather than copied as a complete documentation mirror.
 
+## Reference layers
+
+- `catalog-*` files provide broad discovery coverage across the 71-card component overview. Use them to find candidate component families, not as exact API documentation.
+- `components-*` files provide task-focused implementation guidance for selected high-use components and include version-sensitive caveats. Confirm exact members against the installed package.
+- `mudblazor-patterns.md` provides cross-cutting implementation decisions shared by multiple components. It does not define UX flows, visual composition, or exact component signatures.
+
+This separation is a maintenance contract: add broad inventory to a catalog, component-specific implementation depth to a `components-*` guide, and reusable engineering guidance to the patterns file. Avoid duplicating the same guidance across layers.
+
 ## Version rule
 
 The snapshot tracks the documentation source above, not necessarily the MudBlazor version installed in the user's project. Before emitting code:

@@ -1,6 +1,6 @@
 ---
 name: mudblazor-offline
-description: Build, modify, review, and troubleshoot MudBlazor UI without network access. Use for MudBlazor components, forms, validation, DataGrid, Table, TreeView, dialogs, snackbars, layout, theming, responsive UI, accessibility, component API verification, and MudBlazor-specific build or runtime errors. Do not use for general Blazor lifecycle, render-mode, state, navigation, DI, circuit, or JS interop tasks.
+description: Implement and troubleshoot concrete MudBlazor component usage against the locally installed package. Use for component selection, version-specific parameters, events, generics, templates, providers, or MudBlazor-specific compile/runtime failures. Do not use to decide UX flows, visual composition, or general Blazor platform behavior.
 compatibility: Codex, OpenCode, and Cursor with local filesystem and shell access; no network required
 metadata:
   domain: dotnet-mudblazor
@@ -27,6 +27,16 @@ Do not preload the full documentation snapshot.
 2. Load only the smallest reference file that covers the task.
 3. Load another reference only when the first does not contain enough API or behavioral evidence.
 4. For general Blazor platform behavior, use `blazor-webapp-offline` instead of loading unrelated MudBlazor references.
+
+## Reference naming contract
+
+The reference prefixes identify their role. Do not treat the three layers as interchangeable:
+
+- `catalog-*.md` files are discovery indexes. Use one to identify candidate MudBlazor component families and the broad capabilities visible in the bundled documentation snapshot. They are not implementation tutorials and never override the installed package.
+- `components-*.md` files are focused implementation guides for selected high-use components. Read one after the component family is known and the task needs examples, behavioral caveats, or likely API shapes. Verify every version-sensitive signature locally.
+- `mudblazor-patterns.md` contains cross-cutting engineering patterns that apply across components: binding, forms, server-backed data, overlays, layout, CSS, accessibility, and performance. It is neither an API catalog nor a source for UX or visual-design decisions.
+
+Supporting references have separate roles: `local-evidence.md` explains offline API verification, `diagnostics.md` routes failures, and `documentation-snapshot.md` records snapshot provenance and coverage.
 
 ## Relationship with design skills
 
