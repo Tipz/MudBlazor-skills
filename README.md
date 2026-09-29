@@ -6,7 +6,6 @@
 - Blazor Web App
 - Interactive Server
 - MudBlazor
-- Clean Architecture и Vertical Slice Architecture
 
 Skills используют локальные файлы проекта и включённые в репозиторий справочные материалы. Для обычной работы им не требуются React, Vue, Tailwind, shadcn/ui, Node.js или доступ в интернет.
 

@@ -1,10 +1,10 @@
 ---
 name: mudblazor-offline
 description: Implement and troubleshoot concrete MudBlazor component usage against the locally installed package. Use for component selection, version-specific parameters, events, generics, templates, providers, or MudBlazor-specific compile/runtime failures. Do not use to decide UX flows, visual composition, or general Blazor platform behavior.
-compatibility: Codex, OpenCode, and Cursor with local filesystem and shell access; no network required
 metadata:
   domain: dotnet-mudblazor
   network: offline
+  compatibility: Codex, OpenCode, and Cursor with local filesystem and shell access; no network required
 ---
 
 # MudBlazor Offline Development

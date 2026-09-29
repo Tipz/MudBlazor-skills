@@ -1,10 +1,10 @@
 ---
 name: ui-ux-pro-max
-description: Design or review user flows, interaction behavior, states, validation, accessibility, and information architecture for data-heavy business applications. Use for forms, navigation, tables, trees, dialogs, uploads, long-running operations, and desktop-first usability. Do not use for visual styling or MudBlazor API details.
-compatibility: Codex, OpenCode, and Cursor with local filesystem access; no network required
+description: Design or review user flows, interaction behavior, states, validation, accessibility, and information architecture for data-heavy Blazor/MudBlazor business applications. Use for forms, navigation, tables, trees, dialogs, uploads, long-running operations, and desktop-first usability. Do not use for visual styling or concrete MudBlazor API details.
 metadata:
   domain: business-application-ux
   network: offline
+  compatibility: Codex, OpenCode, and Cursor with local filesystem access; no network required
 ---
 
 # UI/UX Pro Max

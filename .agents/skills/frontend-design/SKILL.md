@@ -1,10 +1,10 @@
 ---
 name: frontend-design
 description: Design or review the visual hierarchy, composition, spacing, typography, density, and responsive presentation of business UI. Use before implementation when a Blazor/MudBlazor screen needs a clearer or more intentional visual design. Do not use for interaction flows, usability rules, or MudBlazor API selection.
-compatibility: Codex, OpenCode, and Cursor with local filesystem access; no network required
 metadata:
   domain: frontend-visual-design
   network: offline
+  compatibility: Codex, OpenCode, and Cursor with local filesystem access; no network required
 ---
 
 # Frontend Design

@@ -1,10 +1,10 @@
 ---
 name: blazor-webapp-offline
 description: Build, modify, review, and troubleshoot .NET Blazor Web App applications without network access. Use for Razor component lifecycle, render modes, Interactive Server, prerendering, state, navigation, dependency injection, forms infrastructure, JS interop, circuits, disposal, and Blazor-specific runtime or build problems. Do not use for component-library-specific APIs unless the task is primarily a Blazor platform issue.
-compatibility: Codex, OpenCode, and Cursor with local filesystem and shell access; no network required
 metadata:
   domain: dotnet-blazor-webapp
   network: offline
+  compatibility: Codex, OpenCode, and Cursor with local filesystem and shell access; no network required
 ---
 
 # Blazor Web App Offline Development
