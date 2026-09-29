@@ -4,26 +4,17 @@ Diagnose from the first failing layer. Avoid broad rewrites until the failure is
 
 ## Build and Razor errors
 
-1. Confirm the selected SDK from `global.json` and `dotnet --info`.
-2. Confirm the target project and target framework.
-3. Inspect `project.assets.json` for the resolved MudBlazor version and compatible assets.
-4. Build the smallest affected project with `--no-restore`.
-5. Address the first actionable compiler/Razor error before downstream errors.
-6. Verify component namespace imports, generic types, binding pairs, callback signatures, and enum members against local XML docs.
+1. Confirm the target project and target framework.
+2. Inspect `project.assets.json` for the resolved MudBlazor version and compatible assets.
+3. Build the smallest affected project with `--no-restore`.
+4. Address the first actionable compiler/Razor error before downstream errors.
+5. Verify MudBlazor namespace imports, generic types, binding pairs, callback signatures, parameters, and enum members against local package XML docs.
 
 If assets are missing and `--no-restore` fails, report that separately. It does not establish that the source change is invalid.
 
 ## UI renders but is not interactive
 
-Check, in order:
-
-1. Whether the component is static SSR or inside an interactive render boundary.
-2. Whether the required interactive services and endpoints are registered/mapped.
-3. Browser/runtime logs available locally.
-4. Server circuit or WebAssembly startup failures.
-5. Whether prerendering created a misleading initial HTML state.
-
-Do not repeatedly rewrite the event handler until interactivity is proven.
+Use `blazor-webapp-offline` to verify the render boundary, event processing, prerendering, and circuit/client startup. Do not rewrite a MudBlazor event handler until platform interactivity is proven.
 
 ## Dialog, menu, select, tooltip, or snackbar fails
 
@@ -69,14 +60,9 @@ Check:
 5. Superseded requests are canceled or their results ignored.
 6. The UI is not mutating the same collection while rendering.
 
-## Runtime or circuit failures
+## Lifecycle, circuit, navigation, or JS interop failures
 
-- Capture the earliest server and browser exception available locally.
-- Treat disposal races and cancellation as expected lifecycle conditions where appropriate.
-- Look for non-serializable state crossing render boundaries.
-- Avoid long blocking work on the renderer context.
-- Confirm scoped service assumptions under Interactive Server circuits.
-- Reproduce with the smallest affected route/component before changing global configuration.
+Use `blazor-webapp-offline`. Keep this diagnostic focused on MudBlazor services, providers, component contracts, generated markup, theme/CSS behavior, and library-specific state.
 
 ## Completion threshold
 
