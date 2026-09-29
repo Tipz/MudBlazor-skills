@@ -28,6 +28,12 @@ Do not preload the full documentation snapshot.
 3. Load another reference only when the first does not contain enough API or behavioral evidence.
 4. For general Blazor platform behavior, use `blazor-webapp-offline` instead of loading unrelated MudBlazor references.
 
+## Relationship with design skills
+
+- For user flows, interaction behavior, validation strategy, application states, and usability decisions, use `ui-ux-pro-max` before selecting components.
+- For visual hierarchy, composition, typography, spacing, density, and aesthetic consistency, use `frontend-design` before applying MudBlazor layout and theme APIs.
+- Use this skill as the source of truth for concrete MudBlazor component choice, parameters, templates, providers, and version-specific API details.
+
 ## Start by establishing the local baseline
 
 Before changing code:
